@@ -1,5 +1,10 @@
 url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
 
+let dateToday = new Date();
+dateToday = dateToday.toISOString().split('T')[0];
+
+document.querySelector('#dateSelect').max = dateToday;
+
 fetch(url)
   .then(res => res.json())
   .then(data => {
