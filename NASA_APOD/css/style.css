@@ -55,6 +55,10 @@ h1, h2 {
   text-align: center;
 }
 
+p {
+  line-height: 1.5;
+}
+
 input {
   color: rgb(0,0,0);
 }
