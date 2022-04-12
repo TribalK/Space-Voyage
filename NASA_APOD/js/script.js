@@ -1,11 +1,18 @@
 let dateToday = new Date();
 const dateObj = document.querySelector('#dateSelect');
+
+let key = config.NASA_API_KEY;
+
+if(key.length == 0) {
+  key = "DEMO_KEY";
+}
+
 getInitialDateImage();
 
 dateObj.addEventListener('change', fetchImage);
 
 function fetchImage() {
-  url = `https://api.nasa.gov/planetary/apod?api_key=b1ifemRfJXwHLc1NJL1IsB0ldfTWHPX80RjzSGEo&date=${dateObj.value}`;
+  url = `https://api.nasa.gov/planetary/apod?api_key=${key}&date=${dateObj.value}`;
 
   fetch(url)
     .then(res => res.json())
