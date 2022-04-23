@@ -38,6 +38,10 @@ section {
 }
 
 img {
+  display: none;
+}
+
+img[src*="https"] {
   width: 90%;
   display: block;
   margin-left: auto;
